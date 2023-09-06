@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Phusion</title>
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+        <link rel="stylesheet" href="resources/webfonts/font-awesome.css">
+        <link rel="stylesheet" href="resources/index.css">
+    </head>
+    <body>
+        
+        <div id="screen-login">
+            <div class="panel-login">
+                <div class="frontpage-title">Phusion Integration</div>
+                <div id="loginForm">
+                    <input type="text" name="user" placeholder="Username" required onkeydown="if(event.keyCode==13) app.login()">
+                    <input type="password" name="password" placeholder="Password" required onkeydown="if(event.keyCode==13) app.login()">
+                    <input type="button" id="loginBtn" value="Login">
+                </div>
+            </div>
+        </div>
+
+        <div id="screen-console" style="display:none">
+            <div class="console-tabs">
+                <div class="tab" type="applications">Applications</div><div class="tab-sep">|</div>
+                <div class="tab" type="clients">Clients</div><div class="tab-sep">|</div>
+                <div class="tab" type="connections">Connections</div><div class="tab-sep">|</div>
+                <div class="tab" type="integrations">Integrations</div><div class="tab-sep">|</div>
+                <div class="tab" type="transactions">Transactions</div><div class="tab-sep">|</div>
+                <div class="tab" type="protocols">Application Protocols</div><div class="tab-sep">|</div>
+                <div class="tab" type="templates">Integration Templates</div><div class="tab-sep">|</div>
+                <div class="tab" type="engines">Engines</div><div class="tab-sep">|</div>
+                <div class="tab" type="users">Users</div>
+                <div id="btn-refresh"><i class="fas fa-sync" title="Refresh"></i></div>
+                <div id="btn-window"><i class="fas fa-window-maximize" title="New Window"></i></div>
+            </div>
+            <div class="console-panels">
+                <div id="panel-applications" class="console-panel" style="display:none"></div>
+                <div id="panel-clients" class="console-panel" style="display:none"></div>
+                <div id="panel-connections" class="console-panel" style="display:none"></div>
+                <div id="panel-integrations" class="console-panel" style="display:none"></div>
+                <div id="panel-transactions" class="console-panel" style="display:none"></div>
+                <div id="panel-protocols" class="console-panel" style="display:none"></div>
+                <div id="panel-templates" class="console-panel" style="display:none"></div>
+                <div id="panel-engines" class="console-panel" style="display:none"></div>
+                <div id="panel-users" class="console-panel" style="display:none"></div>
+            </div>
+        </div>
+
+    </body>
+    <script src="resources/index.js"></script>
+</html>
