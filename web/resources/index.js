@@ -1697,6 +1697,8 @@ var detail = {
     deleteJarFile: function(el, moduleId) {
         var filename = el.previousElementSibling.innerText;
 
+        if (! confirm("Are you sure to delete file "+filename+"?")) return;
+
         app.deleteJarFile(moduleId, filename, function(response) {
             var list = el.parentElement.parentElement;
             list.removeChild(el.parentElement);
